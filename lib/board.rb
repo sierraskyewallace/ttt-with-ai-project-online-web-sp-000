@@ -14,8 +14,7 @@ class Board
     puts " #{cells[6]} | #{cells[7]} | #{cells[8]} "
   end
   def position(input)
-    input = input.to_i 
-    cells[input - 1]
+    cells[input.to_i - 1]
   end
   def full? 
     cells.none? {|cell| cell == " " || cell == nil}
