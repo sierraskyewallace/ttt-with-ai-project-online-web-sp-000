@@ -7,5 +7,6 @@ def start
     puts "Please choose a player mode: 0, 1, 2"
     input = gets.strip 
     if input.to_i == 0 
+    Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O")).play
     
 Game.start.play
