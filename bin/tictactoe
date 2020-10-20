@@ -14,5 +14,7 @@ def start
     elsif input.to_i == 2 
     Game.new.play
     puts "Would you like to play again? [Y/N]"
+    if input == "Y" 
+    Game.play 
     
 Game.start.play
