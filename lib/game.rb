@@ -52,6 +52,9 @@ class Game
     end
     @board.display
   end
+  def start 
+    Game.play
+  end
   def play 
     turn until over?
     if won?
