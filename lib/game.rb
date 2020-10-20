@@ -24,7 +24,7 @@ class Game
         if @board.cells[combination[0]] == @board.cells[combination[1]] &&
           @board.cells[combination[1]] == @board.cells[combination[2]] &&
           @board.taken?(combination[0]+1)
-          return combo
+          return combination
         end
       end
     return false
