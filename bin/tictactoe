@@ -2,32 +2,3 @@
 
 require_relative '../config/environment'
 
-def game_start
-  puts "Welcome to Tic Tac Toe!"
-  puts "Please choose player mode:
-  
-  0 - Computer VS Computer
-  1 - Player VS Computer 
-  2 - Player VS Player "
-  player_mode = gets.strip
-  
-  if player_mode == "1"
-    puts "Would you like to go first? [Y/N]"
-    if gets.strip == "Y"
-      Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
-    else   Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
-    end
-
-  elsif player_mode == "0"
-    Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
-
-  elsif player_mode == "2"
-    Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new).play
-  end
-  puts "Would like to play again? [Y/N]"
-
-end
-
-game_start until gets.strip == "n"
-   
-  
