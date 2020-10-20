@@ -2,4 +2,8 @@
 
 require_relative '../config/environment'
 
+def start 
+    puts "Welcome to Tic Tac Toe!"
+    puts "Please choose a player mode: 0, 1, 2"
+    
 Game.start.play
