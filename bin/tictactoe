@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
-
+Game.start
 def start
     puts "Welcome to Tic Tac Toe"
     puts "Please select player mode: 0, 1, 2"
