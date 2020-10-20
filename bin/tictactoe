@@ -30,4 +30,17 @@ def start
     end
   end
   
-  
+   def play_again
+    input = gets.strip.downcase
+    while input != 'y' || input != 'n'
+      puts "Please enter 'y' or 'n'."
+    case input
+    when 'y'
+      start
+    when 'n'
+      puts "Goodbye!"
+      abort
+      end
+    end
+  end
+end
