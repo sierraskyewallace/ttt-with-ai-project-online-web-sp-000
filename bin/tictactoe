@@ -39,4 +39,4 @@ def start
       end
     end
   end
-    Game.start
+    Game.new
