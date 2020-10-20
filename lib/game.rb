@@ -38,7 +38,7 @@ class Game
   def winner 
     if won?
       combination = won?
-      @board.cells[combo[0]]
+      @board.cells[combination[0]]
     end
   end
   def turn 
