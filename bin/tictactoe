@@ -36,7 +36,6 @@ def start
       start
     when 'N'
       puts "Goodbye!"
-      abort
       end
     end
   end
