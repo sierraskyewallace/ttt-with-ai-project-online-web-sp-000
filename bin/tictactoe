@@ -27,9 +27,9 @@ def start
     end
   end
   
-   def play_again
+ def play_again
     input = gets.strip.downcase
-    while input != 'Y' || input != 'Y'
+    while input != 'Y' || input != 'N'
       puts "Please enter 'Y' or 'N'."
     case input
     when 'Y'
@@ -39,5 +39,6 @@ def start
       abort
       end
     end
-
-  
+  end
+end
+    
