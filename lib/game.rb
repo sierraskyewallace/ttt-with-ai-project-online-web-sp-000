@@ -4,7 +4,6 @@ class Game
     @player_1 = player_1
     @player_2 = player_2
     @board = board
-    @board.display
   end
     WIN_COMBINATIONS = [
   [0,1,2],
