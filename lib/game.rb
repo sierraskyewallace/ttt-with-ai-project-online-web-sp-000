@@ -49,17 +49,17 @@ class Game
        nil
      end
    end
-  def turn 
-    puts "Please enter a number 1-9:"
-    @user_input = current_player.move(@board)
-    if @board.valid_move?(@user_input)
-      @board.update(@user_input, current_player)
-    else puts "Please enter a number 1-9:"
+  def turn
+     puts "Please enter a number 1 - 9:"
+     player = current_player
+     input = player.move(@board)
+     if @board.valid_move?(input)
+      @board.update(input, player)
       @board.display
-      turn
-    end
-    @board.display
-  end
+     else
+       turn
+   end
+ end
   def play 
     turn until over?
     if won?
