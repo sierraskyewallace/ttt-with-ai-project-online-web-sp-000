@@ -26,7 +26,7 @@ class Board
     @cells[position.to_i-1] != " "
   end
   def valid_move?(user_input)
-    user_input.to_i.between?(1, 9) && taken?(user_input) == true
+    user_input.to_i.between?(1, 9) && taken?(user_input) == false
   end
   def update(position, player)
     cells[position.to_i - 1] = player.token
