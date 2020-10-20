@@ -85,12 +85,12 @@ class Game
             puts "Let's go!"
           end
       game.play
-      puts "Would you like to exit the game? [Y/N]"
+      puts "Would you like to play again? [Y/N]"
       response = gets.strip
-      if response == "n"
-        Game.start
-      else
+      if response == "y"
         exit
+      else
+        Game.start
       end
     end
   end
