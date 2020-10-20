@@ -11,5 +11,6 @@ def start
     puts "Would you like to play again? [Y/N]"
     if input == "Y" 
     Game.play 
-    elsif input.to_i == 1 
+    elsif input.to_i == 2 
+    
 Game.start.play
