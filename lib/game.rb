@@ -60,7 +60,4 @@ class Game
       puts "Cat's Game!"
     end
   end
-  def start 
-    Game.new
-  end
 end
