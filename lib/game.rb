@@ -44,11 +44,7 @@ class Game
     won? || draw? ? true : false
   end
   def winner 
-    if won?
-      combination = won?
-      @board.cells[combination[0]]
-    end
-  end
+    
   def turn 
     puts "Please enter a number 1-9:"
     @user_input = current_player.move(@board)
