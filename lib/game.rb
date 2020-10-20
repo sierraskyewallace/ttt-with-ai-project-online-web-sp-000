@@ -88,9 +88,9 @@ class Game
       puts "Would you like to play again? [Y/N]"
       response = gets.strip
       if response == "y"
-        exit
-      else
         Game.start
+      else
+        exit
       end
     end
   end
