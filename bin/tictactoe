@@ -19,5 +19,7 @@ def start
     elsif
     puts "Would you like to go first? {Y/N]"
     if input == "Y" 
+    Game.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O")).play
+    elsif 
     
 Game.start.play
