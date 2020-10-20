@@ -23,7 +23,7 @@ class Board
     cells.count("X") + cells.count("O")
   end
   def taken?(position)
-    cells[position.to_i - 1] == "X" || cells[position.to_i - 1] == "O"
+    @cells[position.to_i-1] != " "
   end
   def valid_move?(position)
     !taken?(position) && position.to_i > 0 && position.to_i <= 9 
