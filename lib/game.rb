@@ -20,15 +20,23 @@ class Game
     board.turn_count % 2 == 0 ? player_1 : player_2
   end
   def won?
-     WIN_COMBINATIONS.each do |combination|
-        if @board.cells[combination[0]] == @board.cells[combination[1]] &&
-          @board.cells[combination[1]] == @board.cells[combination[2]] &&
-          @board.taken?(combination[0]+1)
-          return combination
-        end
-      end
-    return false
-  end
+     WIN_COMBINATIONS.each do |win_combination|
+     win_index_1 = win_combination[0]
+     win_index_2 = win_combination[1]
+     win_index_3 = win_combination[2]
+
+     position_1 = @board.cells[win_index_1]
+     position_2 = @board.cells[win_index_2]
+     position_3 = @board.cells[win_index_3]
+
+     if position_1 == "X" && position_2 == "X" && position_3 == "X"
+       return win_combination
+     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+       return win_combination
+     end
+   end
+   false
+ end
   def draw?
     @board.full? && !won? ? true : false
   end
