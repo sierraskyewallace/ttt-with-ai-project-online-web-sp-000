@@ -9,5 +9,7 @@ def start
     if input.to_i == 0 
     Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O")).play
     puts "Would you like to play again? [Y/N]"
+    if input == "Y" 
+    Game.play 
     
 Game.start.play
