@@ -60,7 +60,37 @@ class Game
       puts "Cat's Game!"
     end
   end
-  def start 
-    Game.play 
+  def self.start
+    puts "Welcome to Tic Tac Toe!"
+    puts "Please choose player mode: 0, 1, 2."
+    player_mode = gets.strip.to_i
+
+          if player_mode == 0
+                game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+
+          elsif player_mode == 1
+            puts "Would you like to play first as X? [Y/N]"
+              input = gets.strip
+
+              if input == "Y" || input == "y"
+                game = Game.new(Players::Human.new("X"),Players::Computer.new("O"))
+              elsif  input == "N" || input == "n"
+                exit
+              else
+              game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
+            end
+
+          else
+            game = Game.new
+            puts "Let's go!"
+          end
+      game.play
+      puts "Would you like to exit the game? [Y/N]"
+      response = gets.strip
+      if response == "n"
+        Game.start
+      else
+        exit
+      end
+    end
   end
-end
